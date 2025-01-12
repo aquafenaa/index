@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'Athena Sans'; /* FOT-RodinBokutoh Pro EB */
+  src: url('./src/AthenaSans.otf');
+}
+
+body {
+  --main-bg-color: #C6A2EB;
+  --secondary-bg-color: #F4E4F4;
+  --font-color: #9A52E2;
+  --hover-color: #FFFFFF;
+
+  margin: 0;
+  padding: 0;
+  font-family: 'Athena Sans', sans-serif;
+
+  background-color: var(--main-bg-color);
+}
+
+#vert-bar {
+  display: inline-block;
+  border: thin solid #9a52e248;
+
+  margin: 5px;
+  border-radius: 2px;
+}
+
+.navbar {
+  background-color: var(--main-bg-color);
+  color: var(--font-color);
+  height: 10vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.navlinks {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.navlink {
+  color: inherit;
+  text-decoration: inherit;
+
+  margin: 0px 20px;
+}
+.navlink:hover {
+  color: var(--hover-color);
+  cursor: pointer;
+}
+
+
+.socials {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  
+  /* margin: 0px 5px; */
+}
+
+.link-svg {
+  fill: var(--font-color);
+
+  padding: 0px 10px;
+
+  width: 40px;
+  height: 40px;
+}
+.link-svg:hover {
+  fill: var(--hover-color);
+  cursor: pointer;
+}
+
+#envelope {
+  position: relative;
+  background-color: var(--secondary-bg-color);
+
+  top: 10px;
+  width: 70px;
+  height: 45px;
+  border-radius: 5px;
+}
+#envelope::before {
+  content: '';
+  position: absolute;
+  background-color: var(--main-bg-color);
+
+  top: 3px;
+  left: 3px;
+  width: 63px;
+  height: 38px;
+  border-radius: 5px;
+}
+#envelope::after {
+  content: '';
+  position: absolute;
+  background-color: var(--secondary-bg-color);
+
+  transform-origin: left;
+
+  transform: rotate(30deg);
+  height: 4px;
+  width: 42px;
+
+  border-radius: 5px;
+}
