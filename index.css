@@ -5,7 +5,8 @@
 
 body {
   --main-bg-color: #C6A2EB;
-  --secondary-bg-color: #F4E4F4;
+  --secondary-bg-color: #a782cc;
+  --tertiary-bg-color: #F4E4F4;
   --font-color: #9A52E2;
   --hover-color: #FFFFFF;
 
@@ -14,7 +15,7 @@ body {
   font-family: 'Athena Sans', sans-serif;
 
   background-color: var(--main-bg-color);
-}
+} 
 
 #vert-bar {
   display: inline-block;
@@ -30,6 +31,7 @@ body {
   height: 10vh;
 
   display: flex;
+  flex-wrap: wrap;
 
   justify-content: center;
   align-items: center;
@@ -52,13 +54,11 @@ body {
   cursor: pointer;
 }
 
-
 .socials {
   position: absolute;
   right: 10px;
+
   display: flex;
-  
-  /* margin: 0px 5px; */
 }
 
 .link-svg {
@@ -74,36 +74,30 @@ body {
   cursor: pointer;
 }
 
-#envelope {
+
+.main-body {
   position: relative;
-  background-color: var(--secondary-bg-color);
+  top: 50%;
+  transform: translateY(20%);
 
-  top: 10px;
-  width: 70px;
-  height: 45px;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+
+  color: var(--font-color)
 }
-#envelope::before {
-  content: '';
-  position: absolute;
-  background-color: var(--main-bg-color);
 
-  top: 3px;
-  left: 3px;
-  width: 63px;
-  height: 38px;
-  border-radius: 5px;
+.profile-picture {
+  border-radius: 20px;
 }
-#envelope::after {
-  content: '';
-  position: absolute;
-  background-color: var(--secondary-bg-color);
-
-  transform-origin: left;
-
-  transform: rotate(30deg);
-  height: 4px;
-  width: 42px;
-
-  border-radius: 5px;
+.information {
+  margin: 0 3vw;
+}
+.name-title {
+  font-size: 40px;
+}
+.info-item {
+  list-style-type: none;
+  
+  margin-left: 1.5vw;
+  margin-bottom: 0.25vh;
 }
